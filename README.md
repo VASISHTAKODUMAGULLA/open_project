@@ -2,10 +2,11 @@
 
 
 
-# `drone_racing_ros2`
+# `Multi_robot_rescue_op_ros2`
 ## Running a Tello simulation in [Gazebo](http://gazebosim.org/)
-## Requirements are Ubuntu 20.04 and ROS2 Galactic
-## Contributions: TIERS Lab, University of Turku for the environment setup and the drone injection
+## Requirements are Ubuntu 22.04 and ROS2 HUMBLE
+## Contributions: 1)TIERS Lab, University of Turku for the environment setup and the drone injection
+##                2) ROBOTIS turtlebot3 tutorial for the turtlebot3 spawning and documentation with NAV2 https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/
 ## Group members: 
 1) Chathuranga Liyanage 
 2) Vasista Kodumagulla
@@ -13,8 +14,8 @@
 
 
 ## Installation
-#### Install ROS2 Galactic
-    https://docs.ros.org/ with the `ros-galactic-desktop` option.
+#### Install ROS2 HUMBLE
+    https://docs.ros.org/ with the `ros-humble-desktop` option.
 #### Make sure you have gazebo 
     sudo apt install gazebo11 libgazebo11 libgazebo11-dev
 `tello_gazebo` consists of several components:
