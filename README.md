@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/94106fde-88e5-4064-8b0f-89feb7ce6953
+
 # `drone_racing_ros2`
 ## Running a Tello simulation in [Gazebo](http://gazebosim.org/)
 ## Requirements are Ubuntu 20.04 and ROS2 Galactic
