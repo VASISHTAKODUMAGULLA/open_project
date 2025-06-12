@@ -1,6 +1,6 @@
 
 
-https://github.com/user-attachments/assets/94106fde-88e5-4064-8b0f-89feb7ce6953
+
 
 # `drone_racing_ros2`
 ## Running a Tello simulation in [Gazebo](http://gazebosim.org/)
@@ -63,7 +63,7 @@ If you run into the **No namespace found** error re-set `GAZEBO_MODEL_PATH`:
 #### you shall see something like this in the gazebo and also in the rviz tool
 
 
-https://github.com/user-attachments/assets/44e9a054-3b66-4c7c-b5fc-5e183527d523
+https://github.com/user-attachments/assets/94106fde-88e5-4064-8b0f-89feb7ce6953
 
 
     
