@@ -4,7 +4,7 @@
 
 # `Open Project`
 ## Running a Tello simulation in [Gazebo](http://gazebosim.org/)
-## Requirements are Ubuntu 20.04 and ROS2 Galactic
+## Requirements are Ubuntu 22.04 and ROS2 HUMBLE
 ## Contributions: TIERS Lab, University of Turku for the environment setup and the drone injection
 ## Group members: 
 1) Chathuranga Liyanage 
