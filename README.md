@@ -13,7 +13,7 @@ This project demonstrates a ROS 2 Humble-based simulation for coordinated multi-
 * **Core goal:** Spawn both Tello and TurtleBot3 in one world, and implement a drone mission to detect a fire hydrant and share its world coordinates using ROS 2 topics and TF pose-sharing for the TurtleBot to follow and arrive at the goal using **Nav2**.
 * **Key capabilities:**
 
-  * **Tello**: ROS-driven flight, camera streaming, vision-based object detection, position broadcast.
+  * **Tello**: ROS-controlled flight, live camera streaming, vision-based object detection, and global position broadcasting.
   * **TurtleBot3**: Gazebo spawn, subscription to drone’s destination location topic, reach the destination
 * **Deliverables:**
 
@@ -136,7 +136,7 @@ ros2 run nav2_map_server map_saver_cli -f ~/map
 
 ---
 
-## Navigation Simulation
+## Navigation Simulation (Run this only **after** fully exploring the environment with SLAM.)
 
 ### 1. Launch Gazebo with Custom World
 
@@ -212,19 +212,18 @@ https://github.com/user-attachments/assets/94106fde-88e5-4064-8b0f-89feb7ce6953
 
 ---
 
-
 ## Next Steps & Improvements
 
 * **Multi-drone extension**: spawn additional Tello instances with unique namespaces for an extensive search in vast operation areas.
 * **Communicating back**: Turtlebot3 after reaching the position need to communicate back to the robot establishing complete cycle of multirobot communication. 
 
 ## Credits
-  
-## [TIERS](https://github.com/TIERS/drone_racing_ros2)  
-## [ROBOTIS-TurtleBot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)  
-## [Cartographer](https://google-cartographer-ros.readthedocs.io/) 
-## [Navigation2](https://navigation.ros.org/)     
-## [Gazebo](https://gazebosim.org/)
+
+- [TIERS/drone_racing_ros2](https://github.com/TIERS/drone_racing_ros2)
+- [ROBOTIS TurtleBot3 Manual](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
+- [Google Cartographer for ROS](https://google-cartographer-ros.readthedocs.io/)
+- [Navigation2 Documentation](https://navigation.ros.org/)
+- [Gazebo Simulator](https://gazebosim.org/)
 
 
 
