@@ -15,7 +15,8 @@ This project demonstrates a ROS 2 Humble-based simulation for coordinated multi-
 
   * **Tello**: ROS-controlled flight, live camera streaming, vision-based object detection, and global position broadcasting.
   * **TurtleBot3**: Gazebo spawn, subscription to drone’s destination location topic, reach the destination
-  * **Deliverables:**
+* **Deliverables:**
+  
    * A combined ROS 2 launch file. It launches both the Tello drone and the Turtlebot, including the world in the gazebo environment. 
    * Python nodes for the drone to reach the goal, and then the TurtleBot reaching the goal using nav2.
    * Documentation and demo recording of end-to-end operation.
