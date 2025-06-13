@@ -73,7 +73,6 @@ git clone https://github.com/VASISHTAKODUMAGULLA/open_project.git
 ### 2. Build the Workspace
 
 ```bash
-cd ~/open_project_ws
 colcon build --symlink-install
 ```
 
