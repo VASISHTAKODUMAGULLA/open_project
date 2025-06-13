@@ -156,7 +156,7 @@ ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:
 ### 3. Estimate Initial Pose in RViz2
 
 - Click **2D Pose Estimate**
-- Click on the map where the robot starts and drag the arrow to indicate its direction
+- Click on the map where the turtlebot starts and drag the arrow to indicate its direction
 - Repeat until the LDS scan overlays correctly on the map
 
 ---
@@ -175,11 +175,6 @@ python3 tello_searching_work.py
 ```
 
 ---
-
-## Next Steps & Improvements
-
-* **Multi-drone extension**: spawn additional Tello instances with unique namespaces.
-* **Communicating back**: Turtleot3 after reaching the position need to communicate back to the robot. 
 
 ## Demonstration Video
 
@@ -211,6 +206,12 @@ https://github.com/user-attachments/assets/94106fde-88e5-4064-8b0f-89feb7ce6953
 - You can extend the inter-robot pose communication using ROS 2 services or topics (`geometry_msgs/PoseStamped`).
 
 ---
+
+
+## Next Steps & Improvements
+
+* **Multi-drone extension**: spawn additional Tello instances with unique namespaces for an extensive search in vast operation areas.
+* **Communicating back**: Turtlebot3 after reaching the position need to communicate back to the robot establishing complete cycle of multirobot communication. 
 
 ## Credits
   
