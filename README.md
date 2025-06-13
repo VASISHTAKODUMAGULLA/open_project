@@ -2,7 +2,7 @@
 
 
 
-# `Open Project`  ‼️ Work in Progress (Install with Caution) ‼️ 
+# `Open Project`  ‼️ Work in Progress (Install with caution)
 
 ## 1. Introduction
 
@@ -136,7 +136,9 @@ ros2 run nav2_map_server map_saver_cli -f ~/map
 
 ---
 
-## Navigation Simulation (Run this only **after** fully exploring the environment with SLAM.)
+❗**Important:** Run this only **after** fully exploring the environment with SLAM.
+
+## Navigation Simulation 
 
 ### 1. Launch Gazebo with Custom World
 
