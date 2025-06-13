@@ -11,7 +11,7 @@
 
 ## 1. Introduction
 
-This project integrates a Tello drone and a TurtleBot3 robot within a unified Gazebo simulation environment to demonstrate cross-platform coordination between vision-based drone control and Nav2-based ground navigation. We utilize the TIERS **drone_racing_ros2** repository for the Tello simulation plugin—originally developed for ROS 2 Galactic—and combine it with standard TurtleBot3 assets in ROS 2 Humble. Through careful adaptation, this setup runs successfully on ROS 2 Humble, offering a polished and functional demonstration of multi-robot cooperation in simulation.
+This project integrates a Tello drone and a TurtleBot3 robot within a unified Gazebo simulation environment to demonstrate cross-platform coordination between vision-based drone control and Nav2-based ground navigation. We utilize the TIERS **drone_racing_ros2** repository for the Tello simulation plugin originally developed for ROS 2 Galactic and combine it with standard TurtleBot3 assets in ROS 2 Humble. Through careful adaptation, this setup runs successfully on ROS 2 Humble, offering a polished and functional demonstration of multi-robot cooperation in simulation.
 
 ## 2. Project Scope
 
@@ -22,7 +22,7 @@ This project integrates a Tello drone and a TurtleBot3 robot within a unified Ga
   * **TurtleBot3**: Gazebo spawn, subscription to drone’s destination location topic, reach the destination
 * **Deliverables:**
 
-  1. A combined ROS 2 launch file. It launches both the Tello drone and the Turtlebot including the world in the gazebo environment. 
+  1. A combined ROS 2 launch file. It launches both the Tello drone and the Turtlebot, including the world in the gazebo environment. 
   2. Python nodes for the drone to reach the goal, and the TurtleBot reaching the goal using nav2.
   3. Documentation and demo recording of end-to-end operation.
 
@@ -32,14 +32,17 @@ This project integrates a Tello drone and a TurtleBot3 robot within a unified Ga
 
    ```bash
    sudo apt update
-   sudo apt install -y \
-     ros-galactic-desktop \
-     gazebo11 libgazebo11 libgazebo11-dev \
-     ros-galactic-cv-bridge ros-galactic-camera-calibration-parsers \
-     ros-galactic-tf2-ros-py ros-galactic-tf2-tools \
-     ros-galactic-turtlebot3-gazebo \
-     libasio-dev libignition-rendering3
-   pip3 install transformations
+   
+   Install Gazebo
+   sudo apt install ros-humble-gazebo-*
+
+   Install Cartographer
+   sudo apt install ros-humble-cartographer
+   sudo apt install ros-humble-cartographer-ros
+
+   Install Navigation2
+   sudo apt install ros-humble-navigation2
+   sudo apt install ros-humble-nav2-bringup
    ```
 2. **Workspace setup**:
 
