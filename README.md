@@ -2,7 +2,7 @@
 
 
 
-# `Open Project`  ‼️ Work in Progress ‼️ 
+# `Open Project`  ‼️ Work in Progress (Install with Caution) ‼️ 
 
 ## 1. Introduction
 
