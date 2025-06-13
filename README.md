@@ -15,7 +15,7 @@ This project integrates a Tello drone and a TurtleBot3 robot within a unified Ga
 
 ## 2. Project Scope
 
-* **Core goal:** Spawn both Tello and TurtleBot3 in one world, and implement a drone mission to detect a fire hydrant and share its world coordinates for the TurtleBot to follow using  **Nav2**.
+* **Core goal:** Spawn both Tello and TurtleBot3 in one world, and implement a drone mission to detect a fire hydrant and share its world coordinates for the TurtleBot to follow and arrive at the goal using **Nav2**.
 * **Key capabilities:**
 
   * **Tello**: ROS-driven flight, camera streaming, vision-based object detection, position broadcast.
