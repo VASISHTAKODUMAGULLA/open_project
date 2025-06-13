@@ -2,7 +2,7 @@
 
 
 
-# `Open Project`  ‼️👨‍🔧👷
+# `Open Project`  ‼️ Work in Progress 👨‍🔧👷
 
 ## Group members: 
 1) Vasista Kodumagulla
