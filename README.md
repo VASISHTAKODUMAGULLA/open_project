@@ -23,8 +23,8 @@ This project demonstrates a ROS 2 Humble-based simulation for coordinated multi-
 
 ## Group members: 
 1) [Vasista Kodumagulla](https://www.linkedin.com/in/vasista-kodumagulla/) 
-2) Chathuranga Liyanage 
-3) Liu Jin yu
+2) [Chathuranga Liyanage](https://www.linkedin.com/in/chathuranga-rivimal/) 
+3) [Liu Jin yu](https://www.linkedin.com/in/jinyu-liu-b8080b327/)
 
 
 ## Dependencies
