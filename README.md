@@ -3,7 +3,7 @@
 
 
 # Multi-robot search operation   ‼️ Work in Progress (Install with caution)
-## Open Project in the course work of `Aerial Robotics and Multi robot systems` at *University of Turku*  
+## Open Project in the course work of `[Aerial Robotics and Multi robot systems](https://opas.peppi.utu.fi/en/course/DTEK2084/92053?period=2024-2027)` at University of Turku  
 ## 1. Introduction
 
 This project demonstrates a ROS 2 Humble-based simulation for coordinated multi-robot behavior using TurtleBot3 and a Tello drone in Gazebo. It integrates a Tello drone and a TurtleBot3 robot within a unified Gazebo simulation environment to demonstrate cross-platform coordination.The TurtleBot3 performs SLAM and navigation, while the drone assists in search operations. We utilize the TIERS **drone_racing_ros2** repository for the Tello simulation plugin originally developed for ROS 2 Galactic and combine it with standard TurtleBot3 assets in ROS 2 Humble. Through careful adaptation, this setup runs successfully on ROS 2 Humble, offering a polished and functional demonstration of multi-robot cooperation in simulation.
