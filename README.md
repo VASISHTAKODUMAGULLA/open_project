@@ -4,11 +4,11 @@
 
 # Multi-robot search operation   ‼️ Work in Progress (Install with caution)
 ## This project is a part of the course work of [`Aerial Robotics and Multi robot systems`](https://opas.peppi.utu.fi/en/course/DTEK2084/92053?period=2024-2027) at University of Turku. 
-## 1. Introduction
+## Introduction
 
 This project demonstrates a ROS 2 Humble-based simulation for coordinated multi-robot behavior using TurtleBot3 and a Tello drone in Gazebo. It integrates a Tello drone and a TurtleBot3 robot within a unified Gazebo simulation environment to demonstrate cross-platform coordination.The TurtleBot3 performs SLAM and navigation, while the drone assists in search operations. We utilize the TIERS **drone_racing_ros2** repository for the Tello simulation plugin originally developed for ROS 2 Galactic and combine it with standard TurtleBot3 assets in ROS 2 Humble. Through careful adaptation, this setup runs successfully on ROS 2 Humble, offering a polished and functional demonstration of multi-robot cooperation in simulation.
 
-## 2. Project Scope
+## Project Scope
 
 * **Core goal:** Spawn both Tello and TurtleBot3 in one world, and implement a drone mission to detect a fire hydrant and share its world coordinates using ROS 2 topics and TF pose-sharing for the TurtleBot to follow and arrive at the goal using **Nav2**.
 * **Key capabilities:**
@@ -17,13 +17,12 @@ This project demonstrates a ROS 2 Humble-based simulation for coordinated multi-
   * **TurtleBot3**: Gazebo spawn, subscription to drone’s destination location topic, reach the destination
 * **Deliverables:**
 
-  1. A combined ROS 2 launch file. It launches both the Tello drone and the Turtlebot, including the world in the gazebo environment. 
-  2. Python nodes for the drone to reach the goal, and the TurtleBot reaching the goal using nav2.
-
-  3. Documentation and demo recording of end-to-end operation.
+  * A combined ROS 2 launch file. It launches both the Tello drone and the Turtlebot, including the world in the gazebo environment. 
+  * Python nodes for the drone to reach the goal, and then the TurtleBot reaching the goal using nav2.
+  * Documentation and demo recording of end-to-end operation.
 
 ## Group members: 
-1) Vasista Kodumagulla
+1) [Vasista Kodumagulla](https://www.linkedin.com/in/vasista-kodumagulla/) 
 2) Chathuranga Liyanage 
 3) Liu Jin yu
 
