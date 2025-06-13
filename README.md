@@ -22,7 +22,7 @@ This project integrates a Tello drone and a TurtleBot3 robot within a unified Ga
   * **TurtleBot3**: Gazebo spawn, subscription to drone’s destination location topic, reach the destination
 * **Deliverables:**
 
-  1. A combined ROS 2 launch file. It launches both the Tello drone and the turtlebot node. 
+  1. A combined ROS 2 launch file. It launches both the Tello drone and the Turtlebot including the world in the gazebo environment. 
   2. Python nodes for the drone to reach the goal, and the TurtleBot reaching the goal using nav2.
   3. Documentation and demo recording of end-to-end operation.
 
