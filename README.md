@@ -47,17 +47,15 @@ This project integrates a Tello drone and a TurtleBot3 robot within a unified Ga
 2. **Workspace setup**:
 
    ```bash
-   mkdir -p ~/open_project/src
-   cd ~/open_project/src
-   git clone https://github.com/TIERS/drone_racing_ros2.git
+   git clone https://github.com/VASISHTAKODUMAGULLA/open_project.git
    ```
    
      ```
-3. **Copy world file**:
+3. **Launch Simulation World**:
 
    ```bash
-   mkdir -p tello_gazebo/worlds
-   cp <your>/open_project_world.sdf tello_gazebo/worlds/
+   export TURTLEBOT3_MODEL=waffle
+   ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
    ```
 4. **Build and source**:
 
