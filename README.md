@@ -2,7 +2,7 @@
 
 
 
-# `Open Project`  ‼️ Work in Progress 👨‍🔧👷
+# `Open Project`  ‼️ Work in Progress
 
 ## Group members: 
 1) Vasista Kodumagulla
@@ -11,11 +11,11 @@
 
 ## 1. Introduction
 
-This project integrates a Tello drone and a TurtleBot3 robot within a unified Gazebo simulation environment to demonstrate cross-platform coordination between vision-based drone control and Nav2-based ground navigation. We utilize the TIERS **drone_racing_ros2** repository for the Tello simulation plugin originally developed for ROS 2 Galactic and combine it with standard TurtleBot3 assets in ROS 2 Humble. Through careful adaptation, this setup runs successfully on ROS 2 Humble, offering a polished and functional demonstration of multi-robot cooperation in simulation.
+This project demonstrates a ROS 2 Humble-based simulation for coordinated multi-robot behavior using TurtleBot3 and a Tello drone in Gazebo. It integrates a Tello drone and a TurtleBot3 robot within a unified Gazebo simulation environment to demonstrate cross-platform coordination.The TurtleBot3 performs SLAM and navigation, while the drone assists in search operations. We utilize the TIERS **drone_racing_ros2** repository for the Tello simulation plugin originally developed for ROS 2 Galactic and combine it with standard TurtleBot3 assets in ROS 2 Humble. Through careful adaptation, this setup runs successfully on ROS 2 Humble, offering a polished and functional demonstration of multi-robot cooperation in simulation.
 
 ## 2. Project Scope
 
-* **Core goal:** Spawn both Tello and TurtleBot3 in one world, and implement a drone mission to detect a fire hydrant and share its world coordinates for the TurtleBot to follow and arrive at the goal using **Nav2**.
+* **Core goal:** Spawn both Tello and TurtleBot3 in one world, and implement a drone mission to detect a fire hydrant and share its world coordinates using ROS 2 topics and TF pose-sharing for the TurtleBot to follow and arrive at the goal using **Nav2**.
 * **Key capabilities:**
 
   * **Tello**: ROS-driven flight, camera streaming, vision-based object detection, position broadcast.
@@ -24,88 +24,165 @@ This project integrates a Tello drone and a TurtleBot3 robot within a unified Ga
 
   1. A combined ROS 2 launch file. It launches both the Tello drone and the Turtlebot, including the world in the gazebo environment. 
   2. Python nodes for the drone to reach the goal, and the TurtleBot reaching the goal using nav2.
+
   3. Documentation and demo recording of end-to-end operation.
 
-## 3. Installation Steps
-
-1. **System prerequisites** (once per machine):
-
-   ```bash
-   sudo apt update
-   
-   Install Gazebo
-   sudo apt install ros-humble-gazebo-*
-
-   Install Cartographer
-   sudo apt install ros-humble-cartographer
-   sudo apt install ros-humble-cartographer-ros
-
-   Install Navigation2
-   sudo apt install ros-humble-navigation2
-   sudo apt install ros-humble-nav2-bringup
-   ```
-2. **Workspace setup**:
-
-   ```bash
-   git clone https://github.com/VASISHTAKODUMAGULLA/open_project.git
-   ```
-   
-     ```
-3. **Launch Simulation World**:
-
-   ```bash
-   export TURTLEBOT3_MODEL=waffle
-   ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
-   ```
-4. **Build and source**:
-
-   ```bash
-   cd ~/drone_race_ws
-   source /opt/ros/galactic/setup.bash
-   colcon build --symlink-install
-   echo "source ~/drone_race_ws/install/setup.bash" >> ~/.bashrc
-   source ~/.bashrc
-   ```
-5. **Configure Gazebo model path** (add to `~/.bashrc`):
-
-   ```bash
-   export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:\
-   $(ros2 pkg prefix tello_gazebo)/share/tello_gazebo/models:\
-   $(ros2 pkg prefix turtlebot3_gazebo)/share/turtlebot3_gazebo/models
-   ```
-
-## 4. Combined Launch File
-
-Create `tello_gazebo/launch/open_project_demo.launch.py`:
 
 
-## 5. Mission Workflow & Verification
+## Dependencies
 
-1. **Launch**:
+Ensure you are using **ROS 2 Humble** on Ubuntu 22.04. Then follow the steps below.
 
-   ```bash
-   source ~/drone_race_ws/install/setup.bash
-   source /usr/share/gazebo/setup.sh
-   ros2 launch tello_gazebo open_project_demo.launch.py
-   ```
-2. **Verify streams**:
+### Install Required Packages
 
-   ```bash
-   ros2 topic echo /drone1/image_raw
-   ros2 topic echo /drone1/red_location
-   ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r __ns:=/turtlebot
-   ```
-3. **Demo**:
+Open a terminal and install the following:
 
-   * Drone takes off, searches for red cube, centers, stops, and publishes its world-frame pose.
-   * TurtleBot3 subscribe to `/drone1/red_location` and uses nav2 and reach the location. 
+#### Gazebo
+```bash
+sudo apt install ros-humble-gazebo-*
+```
 
-## 7. Next Steps & Improvements
+#### Cartographer SLAM
+```bash
+sudo apt install ros-humble-cartographer
+sudo apt install ros-humble-cartographer-ros
+```
+
+####  Navigation2 Stack
+```bash
+sudo apt install ros-humble-navigation2
+sudo apt install ros-humble-nav2-bringup
+```
+
+---
+
+## 🛠 Setup Instructions
+
+### 1. Create a Workspace and Clone the Project
+
+```bash
+mkdir -p ~/open_project_ws/
+cd ~/open_project_ws
+git clone https://github.com/VASISHTAKODUMAGULLA/open_project.git
+```
+
+### 2. Build the Workspace
+
+```bash
+cd ~/open_project_ws
+colcon build --symlink-install
+```
+
+### 3. Source the Workspace
+
+```bash
+source install/setup.bash
+```
+
+---
+
+## SLAM Mapping
+
+### 1. Launch Simulation World
+
+```bash
+export ROS_DOMAIN_ID=69
+source install/setup.bash
+export TURTLEBOT3_MODEL=burger
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+```
+
+### 2. Run Cartographer SLAM
+
+Open a new terminal:
+
+```bash
+export ROS_DOMAIN_ID=69
+source install/setup.bash
+export TURTLEBOT3_MODEL=burger
+ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
+```
+
+### 3. Teleoperate the Robot to Explore
+
+```bash
+export ROS_DOMAIN_ID=69
+source install/setup.bash
+export TURTLEBOT3_MODEL=burger
+ros2 run turtlebot3_teleop teleop_keyboard
+```
+
+**Controls:**
+
+```
+        w
+   a    s    d
+        x
+```
+
+- `w/x`: Move forward/backward
+- `a/d`: Turn left/right
+- `space` or `s`: Stop
+
+### 4. Save the Map
+
+```bash
+ros2 run nav2_map_server map_saver_cli -f ~/map
+```
+
+---
+
+## Navigation Simulation
+
+### 1. Launch Gazebo with Custom World
+
+```bash
+export ROS_DOMAIN_ID=69
+source install/setup.bash
+export TURTLEBOT3_MODEL=waffle
+ros2 launch turtlebot3_gazebo open_project.launch.py
+```
+
+### 2. Run Navigation2
+
+In a new terminal:
+
+```bash
+export ROS_DOMAIN_ID=69
+source install/setup.bash
+export TURTLEBOT3_MODEL=waffle
+ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=$HOME/map.yaml
+```
+
+### 3. Estimate Initial Pose in RViz2
+
+- Click **2D Pose Estimate**
+- Click on the map where the robot starts and drag the arrow to indicate its direction
+- Repeat until the LDS scan overlays correctly on the map
+
+---
+
+## Tello Drone Search Script
+
+### 1. Run the Drone Script
+
+In a new terminal:
+
+```bash
+export ROS_DOMAIN_ID=69
+source install/setup.bash
+cd ~/open_project_ws/src/open_project/scripts
+python3 tello_searching_work.py
+```
+
+---
+
+## Next Steps & Improvements
 
 * **Multi-drone extension**: spawn additional Tello instances with unique namespaces.
 * **Communicating back**: Turtleot3 after reaching the position need to communicate back to the robot. 
 
-## 8. Demonstration Video
+## Demonstration Video
 
 Record the simulation as follows:
 
@@ -123,6 +200,39 @@ https://github.com/user-attachments/assets/94106fde-88e5-4064-8b0f-89feb7ce6953
 https://github.com/TIERS/drone_racing_ros2
 
 https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/
+
+
+
+
+
+## Key Features
+
+- ROS 2 Humble multi-robot simulation
+- SLAM using Cartographer
+- Navigation using Nav2
+- Inter-robot TF pose sharing
+- Tello drone for search and rescue
+- Map saving and reuse for navigation
+
+---
+
+## Notes
+
+- Always ensure `ROS_DOMAIN_ID` is consistent across all terminals.
+- Adjust the `TURTLEBOT3_MODEL` environment variable as needed (`burger`, `waffle`, or `waffle_pi`).
+- Use the saved map YAML path correctly while launching Nav2.
+- You can extend the inter-robot pose communication using ROS 2 services or topics (`geometry_msgs/PoseStamped`).
+
+---
+
+## Credits
+  
+-  https://github.com/TIERS/drone_racing_ros2
+- [TurtleBot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
+- [Cartographer](https://google-cartographer-ros.readthedocs.io/)
+- [Navigation2](https://navigation.ros.org/)
+- [Gazebo](https://gazebosim.org/)
+
 
 
 
