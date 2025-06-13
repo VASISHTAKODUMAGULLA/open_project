@@ -140,8 +140,9 @@ ros2 run nav2_map_server map_saver_cli -f ~/map
 ```
 
 ---
-## Now you may feel free to close all the terminals since the environment is ready for testing :)
-## ❗**Important:** Run this only **after** fully exploring the environment with SLAM.
+## Now you may feel free to close all the terminals since the environment is ready for testing :) 
+## ❗**Important:** Run this only **after** fully exploring your environment with SLAM Cartographer.
+Also you can use the `map.pgm` file and `map.yaml` files if you are just testing my own exact simulation. For simplicity, drop them in your `Home` folder and you are good to go!
 
 ## Navigation Simulation 
 
