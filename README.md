@@ -11,7 +11,7 @@
 
 ## 1. Introduction
 
-This project integrates a Tello drone and a TurtleBot3 robot into a single Gazebo simulation environment, enabling cross-platform coordination (vision-based tello drone and nav2 based navigation) for a unified demonstration. We leverage the TIERS **drone\_racing\_ros2** repository for the Tello plugin and models which was initiallybuilt for ROS2 Galactic, combined with standard TurtleBot3 assets on ROS2 humble and this combined approach is a working demo on ROS 2 Humble, ideal for a polished simulation demonstrating multi robot operation.
+This project integrates a Tello drone and a TurtleBot3 robot within a unified Gazebo simulation environment to demonstrate cross-platform coordination between vision-based drone control and Nav2-based ground navigation. We utilize the TIERS **drone_racing_ros2** repository for the Tello simulation plugin—originally developed for ROS 2 Galactic—and combine it with standard TurtleBot3 assets in ROS 2 Humble. Through careful adaptation, this setup runs successfully on ROS 2 Humble, offering a polished and functional demonstration of multi-robot cooperation in simulation.
 
 ## 2. Project Scope
 
