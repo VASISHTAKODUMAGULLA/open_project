@@ -39,7 +39,7 @@ Then follow the steps below.
 
 ### Install Required Packages
 
-Open a terminal and install the following: (Dont forget the star '*' after gazebo-)
+Open a terminal and install the fllowing. (Dont forget the star '*' after gazebo-)
 
 #### Gazebo
 ```bash
