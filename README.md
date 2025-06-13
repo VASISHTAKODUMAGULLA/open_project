@@ -183,7 +183,7 @@ In a new terminal:
 ```bash
 export ROS_DOMAIN_ID=69
 source install/setup.bash
-cd ~/open_project_ws/src/open_project/scripts
+cd ~/open_project_ws/open_project/src/scripts
 python3 tello_searching_work.py
 ```
 
