@@ -214,7 +214,7 @@ https://github.com/user-attachments/assets/94106fde-88e5-4064-8b0f-89feb7ce6953
 
 ## Credits
   
-- [TIERS](https://github.com/TIERS/drone_racing_ros2) [TurtleBot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/) [Cartographer](https://google-cartographer-ros.readthedocs.io/)[Navigation2](https://navigation.ros.org/) [Gazebo](https://gazebosim.org/)
+## [TIERS](https://github.com/TIERS/drone_racing_ros2)     [TurtleBot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)    [Cartographer](https://google-cartographer-ros.readthedocs.io/) [Navigation2](https://navigation.ros.org/)     [Gazebo](https://gazebosim.org/)
 
 
 
