@@ -60,7 +60,7 @@ sudo apt install ros-humble-nav2-bringup
 
 ---
 
-## 🛠 Setup Instructions
+## Setup Instructions
 
 ### 1. Create a Workspace and Clone the Project
 
