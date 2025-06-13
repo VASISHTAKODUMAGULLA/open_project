@@ -136,7 +136,7 @@ ros2 run nav2_map_server map_saver_cli -f ~/map
 
 ---
 
-❗**Important:** Run this only **after** fully exploring the environment with SLAM.
+## ❗**Important:** Run this only **after** fully exploring the environment with SLAM.
 
 ## Navigation Simulation 
 
