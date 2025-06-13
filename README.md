@@ -2,11 +2,11 @@
 
 
 
-# `Open Project`  !!!!WorkInProgress
+# `Open Project`  ‼️👨‍🔧👷
 
 ## Group members: 
-1) Chathuranga Liyanage 
-2) Vasista Kodumagulla
+1) Vasista Kodumagulla
+2) Chathuranga Liyanage 
 3) Liu Jin yu
 
 ## 1. Introduction
