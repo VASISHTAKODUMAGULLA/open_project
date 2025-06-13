@@ -109,6 +109,8 @@ ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
 
 ### 3. Teleoperate the Robot to Explore
 
+Open a new terminal:
+
 ```bash
 export ROS_DOMAIN_ID=69
 source install/setup.bash
@@ -130,17 +132,22 @@ ros2 run turtlebot3_teleop teleop_keyboard
 
 ### 4. Save the Map
 
+Open a new terminal:
+
 ```bash
+export ROS_DOMAIN_ID=69
+source install/setup.bash
 ros2 run nav2_map_server map_saver_cli -f ~/map
 ```
 
 ---
-
+## Now you may feel free to close all the terminals since the environment is ready for testing :)
 ## ❗**Important:** Run this only **after** fully exploring the environment with SLAM.
 
 ## Navigation Simulation 
 
 ### 1. Launch Gazebo with Custom World
+Open a new terminal in the root work space directory: 
 
 ```bash
 export ROS_DOMAIN_ID=69
@@ -184,9 +191,6 @@ python3 tello_searching_work.py
 ---
 
 ## Demonstration Video
-
-Record the simulation as follows:
-
 
 #### you shall see something like this in the gazebo and also in the rviz tool
 
