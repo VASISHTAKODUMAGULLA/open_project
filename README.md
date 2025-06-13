@@ -2,7 +2,7 @@
 
 
 
-# `Open Project`  ‼️ Work in Progress (Install with caution)
+# Multi-robot search operation   ‼️ Work in Progress (Install with caution)
 
 ## 1. Introduction
 
