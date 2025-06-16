@@ -50,6 +50,10 @@ sudo apt install ignition-fortress \
                      ros-humble-gazebo-ros2-control-demos
 
 ```
+### additional libraries
+```bash
+sudo apt install libasio-dev
+```
 
 #### Cartographer SLAM
 ```bash
