@@ -89,6 +89,7 @@ colcon build --symlink-install
 ### 3. Source the Workspace
 
 ```bash
+source /opt/ros/humble/setup.bash
 source install/setup.bash
 ```
 
@@ -100,6 +101,7 @@ source install/setup.bash
 
 ```bash
 export ROS_DOMAIN_ID=69
+source /opt/ros/humble/setup.bash
 source install/setup.bash
 source /usr/share/gazebo/setup.sh
 export TURTLEBOT3_MODEL=burger
@@ -112,6 +114,7 @@ Open a new terminal:
 
 ```bash
 export ROS_DOMAIN_ID=69
+source /opt/ros/humble/setup.bash
 source install/setup.bash
 export TURTLEBOT3_MODEL=burger
 ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
@@ -123,6 +126,7 @@ Open a new terminal:
 
 ```bash
 export ROS_DOMAIN_ID=69
+source /opt/ros/humble/setup.bash
 source install/setup.bash
 export TURTLEBOT3_MODEL=burger
 ros2 run turtlebot3_teleop teleop_keyboard
@@ -146,6 +150,7 @@ Open a new terminal:
 
 ```bash
 export ROS_DOMAIN_ID=69
+source /opt/ros/humble/setup.bash
 source install/setup.bash
 ros2 run nav2_map_server map_saver_cli -f ~/map
 ```
@@ -162,6 +167,7 @@ Open a new terminal in the root work space directory:
 
 ```bash
 export ROS_DOMAIN_ID=69
+source /opt/ros/humble/setup.bash
 source install/setup.bash
 source /usr/share/gazebo/setup.sh
 export TURTLEBOT3_MODEL=waffle
@@ -175,6 +181,7 @@ In a new terminal:
 
 ```bash
 export ROS_DOMAIN_ID=69
+source /opt/ros/humble/setup.bash
 source install/setup.bash
 export TURTLEBOT3_MODEL=waffle
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=$HOME/map.yaml
@@ -196,6 +203,7 @@ In a new terminal:
 
 ```bash
 export ROS_DOMAIN_ID=69
+source /opt/ros/humble/setup.bash
 source install/setup.bash
 cd ~/open_project_ws/open_project/src/scripts
 python3 tello_searching_work.py
