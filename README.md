@@ -101,6 +101,7 @@ source install/setup.bash
 ```bash
 export ROS_DOMAIN_ID=69
 source install/setup.bash
+source /usr/share/gazebo/setup.sh
 export TURTLEBOT3_MODEL=burger
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
@@ -162,6 +163,7 @@ Open a new terminal in the root work space directory:
 ```bash
 export ROS_DOMAIN_ID=69
 source install/setup.bash
+source /usr/share/gazebo/setup.sh
 export TURTLEBOT3_MODEL=waffle
 ros2 launch turtlebot3_gazebo open_project.launch.py
 ```
