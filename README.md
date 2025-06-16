@@ -39,6 +39,13 @@ Open a terminal and install the fllowing. (Dont forget the star '*' after gazebo
 #### Gazebo
 ```bash
 sudo apt install ros-humble-gazebo-*
+sudo apt update
+sudo apt install ignition-fortress \
+                     ros-humble-ros-gz-sim \
+                     ros-humble-ros-gz-bridge \
+                     ros-humble-gazebo-ros2-control \
+                     ros-humble-gazebo-ros2-control-demos
+
 ```
 
 #### Cartographer SLAM
@@ -70,6 +77,7 @@ git clone https://github.com/VASISHTAKODUMAGULLA/open_project.git
 ```bash
 colcon build --symlink-install
 ```
+### Ignore the dev warnings if the colcon build is complete.
 
 ### 3. Source the Workspace
 
@@ -150,6 +158,7 @@ source install/setup.bash
 export TURTLEBOT3_MODEL=waffle
 ros2 launch turtlebot3_gazebo open_project.launch.py
 ```
+### Ignore any spwaning errors that you see in the launch terminal if you see the gazebo is launched with both tello and turtlebot and check if the next steps are working, since this is expected in some environments.
 
 ### 2. Run Navigation2
 
