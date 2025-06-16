@@ -2,7 +2,7 @@
 
 
 
-# Multi-robot search operation   ‼️ Work in Progress (Install with caution)
+# Multi-robot search operation
 ## This project is a part of the course work of [`Aerial Robotics and Multi robot systems`](https://opas.peppi.utu.fi/en/course/DTEK2084/92053?period=2024-2027) at University of Turku. 
 ## Introduction
 
