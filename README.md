@@ -219,14 +219,14 @@ python3 tello_searching_work.py
 https://github.com/user-attachments/assets/94106fde-88e5-4064-8b0f-89feb7ce6953
 
 
-## Key Features
+## Key Features and what has been achieved as a part of this project: 
 
-- ROS 2 Humble multi-robot simulation
+- ROS 2 Humble multi-robot simulation.
 - SLAM using Cartographer
-- Navigation using Nav2
+- Navigation using Nav2 library has been achieved where finally the goal is reached by the turtlebot based on the broadcasted TELLOs global pose.
 - Inter-robot TF pose sharing
 - Tello drone for search and rescue
-- Map saving and reuse for navigation
+- Map saving and reuse for navigation by the turtlebot.
 
 ---
 
