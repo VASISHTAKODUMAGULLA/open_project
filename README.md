@@ -30,7 +30,10 @@ This project demonstrates a ROS 2 Humble-based simulation for coordinated multi-
 
 ## Dependencies
 
-Ensure you are using **ROS 2 Humble** on Ubuntu 22.04. Then follow the steps below.
+Ensure you are using **ROS 2 Humble** on Ubuntu 22.04.
+https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html 
+
+Then follow the steps below.
 
 ### Install Required Packages
 
