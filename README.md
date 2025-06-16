@@ -30,12 +30,7 @@ This project demonstrates a ROS 2 Humble-based simulation for coordinated multi-
 
 ## Dependencies
 
-Ensure you are using **ROS 2 Humble** on Ubuntu 22.04. (Do This step only if you dont have ROS2 Humble installed on your computer).
-```bash
-sudo apt update && sudo apt install -y software-properties-common curl && sudo add-apt-repository universe && sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo tee /etc/apt/trusted.gpg.d/ros.asc > /dev/null && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/ros.asc] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null && sudo apt update && sudo apt install -y ros-humble-desktop python3-colcon-common-extensions && echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc && source ~/.bashrc
-```
-
-Then follow the steps below.
+Ensure you are using **ROS 2 Humble** on Ubuntu 22.04. Then follow the steps below.
 
 ### Install Required Packages
 
